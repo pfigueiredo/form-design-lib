@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison - form-design-lib</title>
+    <meta name="description" content="Compare form-design-lib with other popular React form libraries like react-hook-form, Formik, and RJSF.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="6" fill="#6366f1"/>
+                        <path d="M8 12h16M8 16h12M8 20h16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <a href="index.html" class="logo-text" style="text-decoration: none; color: inherit;">form-design-lib</a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#examples">Examples</a>
+                    <a href="index.html#docs">Documentation</a>
+                    <a href="index.html#license">License</a>
+                    <a href="https://github.com/pfigueiredo/form-design-lib" class="github-link" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Comparison Section -->
+    <section class="comparison-page">
+        <div class="container">
+            <div class="comparison-header">
+                <h1 class="page-title">Library Comparison</h1>
+                <p class="page-subtitle">See how form-design-lib compares to other popular React form libraries</p>
+            </div>
+
+            <div class="comparison-content">
+                <div class="comparison-intro">
+                    <h2>Overview</h2>
+                    <p>
+                        <strong>form-design-lib</strong> is a specialized form library designed for configuration-driven form generation with built-in API integration. 
+                        While other libraries excel at programmatic form building, form-design-lib focuses on creating dynamic forms from JSON/TypeScript configuration, 
+                        making it ideal for CMS systems, admin panels, and enterprise applications where forms need to be generated dynamically.
+                    </p>
+                </div>
+
+                <div class="comparison-table-wrapper">
+                    <h2>Feature Comparison</h2>
+                    <div class="comparison-table">
+                        <div class="comparison-row header">
+                            <div class="comparison-cell feature">Feature</div>
+                            <div class="comparison-cell library">form-design-lib</div>
+                            <div class="comparison-cell library">react-hook-form</div>
+                            <div class="comparison-cell library">Formik</div>
+                            <div class="comparison-cell library">RJSF</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-cell feature">JSON Configuration</div>
+                            <div class="comparison-cell library yes">✅ Built-in</div>
+                            <div class="comparison-cell library no">❌ No</div>
+                            <div class="comparison-cell library no">❌ No</div>
+                            <div class="comparison-cell library yes">✅ Built-in</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-cell feature">API Integration</div>
+                            <div class="comparison-cell library yes">✅ Built-in</div>
+                            <div class="comparison-cell library no">❌ Manual</div>
+                            <div class="comparison-cell library no">❌ Manual</div>
+                            <div class="comparison-cell library no">❌ Manual</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-cell feature">Dependent Data Sources</div>
+                            <div class="comparison-cell library yes">✅ Automatic</div>
+                            <div class="comparison-cell library no">❌ Manual</div>
+                            <div class="comparison-cell library no">❌ Manual</div>
+                            <div class="comparison-cell library no">❌ Manual</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-cell feature">Field Registry</div>
+                            <div class="comparison-cell library yes">✅ Runtime</div>
+                            <div class="comparison-cell library no">❌ No</div>
+                            <div class="comparison-cell library no">❌ No</div>
+                            <div class="comparison-cell library partial">⚠️ Limited</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-cell feature">Performance</div>
+                            <div class="comparison-cell library yes">✅ Optimized</div>
+                            <div class="comparison-cell library yes">✅ Excellent</div>
+                            <div class="comparison-cell library partial">⚠️ Good</div>
+                            <div class="comparison-cell library partial">⚠️ Moderate</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-cell feature">TypeScript Support</div>
+                            <div class="comparison-cell library yes">✅ Full</div>
+                            <div class="comparison-cell library yes">✅ Full</div>
+                            <div class="comparison-cell library yes">✅ Full</div>
+                            <div class="comparison-cell library yes">✅ Full</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-cell feature">Validation</div>
+                            <div class="comparison-cell library yes">✅ Built-in</div>
+                            <div class="comparison-cell library yes">✅ Excellent</div>
+                            <div class="comparison-cell library yes">✅ Good</div>
+                            <div class="comparison-cell library yes">✅ Built-in</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-cell feature">Conditional Fields</div>
+                            <div class="comparison-cell library yes">✅ Built-in</div>
+                            <div class="comparison-cell library partial">⚠️ Manual</div>
+                            <div class="comparison-cell library partial">⚠️ Manual</div>
+                            <div class="comparison-cell library yes">✅ Built-in</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-cell feature">Nested Lists</div>
+                            <div class="comparison-cell library yes">✅ Native</div>
+                            <div class="comparison-cell library partial">⚠️ Manual</div>
+                            <div class="comparison-cell library partial">⚠️ Manual</div>
+                            <div class="comparison-cell library partial">⚠️ Limited</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="comparison-cell feature">Bundle Size</div>
+                            <div class="comparison-cell library">~45KB</div>
+                            <div class="comparison-cell library">~9KB</div>
+                            <div class="comparison-cell library">~13KB</div>
+                            <div class="comparison-cell library">~200KB+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-details">
+                    <h2>Detailed Comparison</h2>
+
+                    <div class="library-comparison">
+                        <h3>form-design-lib vs react-hook-form</h3>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>form-design-lib Advantages:</h4>
+                                <ul>
+                                    <li>JSON/TypeScript configuration - no JSX needed for form structure</li>
+                                    <li>Built-in API integration with automatic dependency management</li>
+                                    <li>Runtime field registration for extensibility</li>
+                                    <li>Native support for nested lists and complex data structures</li>
+                                    <li>Automatic conditional field visibility</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>react-hook-form Advantages:</h4>
+                                <ul>
+                                    <li>Smaller bundle size (~9KB vs ~45KB)</li>
+                                    <li>Better performance for simple forms</li>
+                                    <li>More mature ecosystem and community</li>
+                                    <li>Better for programmatic form building</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="recommendation">
+                            <strong>Choose form-design-lib if:</strong> You need configuration-driven forms, API integration, or dynamic form generation.<br>
+                            <strong>Choose react-hook-form if:</strong> You're building forms programmatically with JSX and need maximum performance.
+                        </p>
+                    </div>
+
+                    <div class="library-comparison">
+                        <h3>form-design-lib vs Formik</h3>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>form-design-lib Advantages:</h4>
+                                <ul>
+                                    <li>Configuration-first approach - no JSX for form structure</li>
+                                    <li>Built-in API data source management</li>
+                                    <li>Better performance (no unnecessary re-renders)</li>
+                                    <li>Runtime extensibility with Field Registry</li>
+                                    <li>Native nested list support</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>Formik Advantages:</h4>
+                                <ul>
+                                    <li>More mature and battle-tested</li>
+                                    <li>Larger community and ecosystem</li>
+                                    <li>Better for traditional React form patterns</li>
+                                    <li>More examples and tutorials available</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="recommendation">
+                            <strong>Choose form-design-lib if:</strong> You need dynamic form generation from configuration or API-driven forms.<br>
+                            <strong>Choose Formik if:</strong> You prefer traditional React patterns and have a mature ecosystem requirement.
+                        </p>
+                    </div>
+
+                    <div class="library-comparison">
+                        <h3>form-design-lib vs React JSON Schema Form (RJSF)</h3>
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>form-design-lib Advantages:</h4>
+                                <ul>
+                                    <li>Smaller bundle size (~45KB vs ~200KB+)</li>
+                                    <li>Built-in API integration with dependency management</li>
+                                    <li>Better TypeScript support</li>
+                                    <li>Runtime field registration</li>
+                                    <li>More flexible binding system</li>
+                                    <li>Better performance</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>RJSF Advantages:</h4>
+                                <ul>
+                                    <li>JSON Schema standard compliance</li>
+                                    <li>More mature and widely used</li>
+                                    <li>Larger ecosystem of themes and widgets</li>
+                                    <li>Better documentation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="recommendation">
+                            <strong>Choose form-design-lib if:</strong> You need API integration, better performance, or more flexibility.<br>
+                            <strong>Choose RJSF if:</strong> You need JSON Schema compliance or have existing JSON Schema definitions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="use-cases">
+                    <h2>When to Use form-design-lib</h2>
+                    <div class="use-case-grid">
+                        <div class="use-case-card">
+                            <h3>✅ Ideal For</h3>
+                            <ul>
+                                <li>CMS and admin panels</li>
+                                <li>Dynamic form generation</li>
+                                <li>API-driven applications</li>
+                                <li>Enterprise applications</li>
+                                <li>Forms with complex dependencies</li>
+                                <li>Multi-step wizards</li>
+                                <li>Data entry applications</li>
+                            </ul>
+                        </div>
+                        <div class="use-case-card">
+                            <h3>❌ Not Ideal For</h3>
+                            <ul>
+                                <li>Simple static forms</li>
+                                <li>Forms that don't need API integration</li>
+                                <li>Maximum performance requirements</li>
+                                <li>JSON Schema compliance needed</li>
+                                <li>Very small bundle size critical</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conclusion">
+                    <h2>Conclusion</h2>
+                    <p>
+                        <strong>form-design-lib</strong> fills a unique niche in the React form library ecosystem. While libraries like react-hook-form and Formik 
+                        excel at programmatic form building, form-design-lib specializes in configuration-driven forms with built-in API integration. 
+                        If you need to generate forms dynamically from configuration, manage complex API dependencies, or build extensible form systems, 
+                        form-design-lib is an excellent choice.
+                    </p>
+                    <p>
+                        For traditional React form patterns, simple forms, or when bundle size is critical, consider react-hook-form or Formik. 
+                        For JSON Schema compliance, RJSF remains the standard choice.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>form-design-lib</h4>
+                    <p>Dynamic forms from JSON configuration</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#examples">Examples</a></li>
+                        <li><a href="index.html#docs">Documentation</a></li>
+                        <li><a href="index.html#license">License</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://github.com/pfigueiredo/form-design-lib" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://github.com/pfigueiredo/form-design-lib/issues" target="_blank" rel="noopener noreferrer">Issues</a></li>
+                        <li><a href="https://github.com/pfigueiredo/form-design-lib/discussions" target="_blank" rel="noopener noreferrer">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>License</h4>
+                    <p>GPLv2</p>
+                    <p class="footer-note">Commercial licenses available</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 form-design-lib. Licensed under GPLv2.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
