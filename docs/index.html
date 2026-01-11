@@ -184,7 +184,7 @@
     <section id="examples" class="examples">
         <div class="container">
             <h2 class="section-title">Examples</h2>
-            <div class="examples-grid">
+            <div class="examples-vertical">
                 <div class="example-card">
                     <h3>Basic Form</h3>
                     <pre><code>const config = {
@@ -206,20 +206,44 @@
 }</code></pre>
                 </div>
                 <div class="example-card">
-                    <h3>API Integration</h3>
+                    <h3>Dependent API Source</h3>
+                    <p class="example-description">Fetch states based on selected country. The stateList API will only be called after a country is selected.</p>
                     <pre><code>sources: [
+  {
+    sourceName: 'countryList',
+    sourceType: 'API',
+    endpoint: '/api/countries',
+  },
   {
     sourceName: 'stateList',
     sourceType: 'API',
-    endpoint: '/api/states?country={code}',
+    endpoint: '/api/states?country={countryCode}',
     parameters: {
-      code: 'object.country',
+      countryCode: 'object.country',
+    },
+  },
+],
+fields: [
+  {
+    fieldName: 'Country',
+    fieldType: 'Dropdown',
+    binding: 'object.country',
+    optionsSource: 'countryList',
+  },
+  {
+    fieldName: 'State',
+    fieldType: 'Dropdown',
+    binding: 'object.state',
+    optionsSource: 'stateList',
+    dependsOn: {
+      field: 'object.country',
+      condition: (value) => !!value,
     },
   },
 ]</code></pre>
                 </div>
                 <div class="example-card">
-                    <h3>Custom Field</h3>
+                    <h3>Custom Field Registration</h3>
                     <pre><code>import { defaultFieldRegistry } from 'form-design-lib'
 
 defaultFieldRegistry.register(

@@ -349,6 +349,14 @@ body {
     background: var(--bg-primary);
 }
 
+.examples-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .examples-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -364,10 +372,18 @@ body {
 }
 
 .example-card h3 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     color: var(--text-primary);
+}
+
+.example-description {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    font-style: italic;
 }
 
 .example-card pre {
@@ -636,6 +652,10 @@ body {
     .examples-grid,
     .docs-grid {
         grid-template-columns: 1fr;
+    }
+
+    .examples-vertical {
+        max-width: 100%;
     }
 
     .step {
