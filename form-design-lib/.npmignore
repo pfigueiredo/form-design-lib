@@ -1,0 +1,71 @@
+# Source files
+src/
+*.ts
+*.tsx
+!*.d.ts
+
+# Test files
+**/__tests__/
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+**/*.test.d.ts
+**/*.test.d.ts.map
+test/
+vitest.config.ts
+
+# Development files
+demo-app/
+node_modules/
+.vscode/
+.idea/
+
+# Build config
+vite.config.ts
+tsconfig.json
+tsconfig.node.json
+tsconfig.test.json
+
+# Documentation (keep README.md and LICENSE)
+*.md
+!README.md
+!LICENSE
+
+# Deprecated strategies (keep only UnifiedBindingStrategy)
+dist/core/binding/strategies/ArrayBindingStrategy.*
+dist/core/binding/strategies/DotNotationBindingStrategy.*
+dist/core/binding/strategies/NestedListBindingStrategy.*
+
+# Git
+.git/
+.gitignore
+
+# IDE
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Misc
+u_stories/
+architecture_todo.md
+TODO.md
+ARCHITECTURE_REVIEW*.md
+COMPARISON.md
+FIX_EXPLANATION.md

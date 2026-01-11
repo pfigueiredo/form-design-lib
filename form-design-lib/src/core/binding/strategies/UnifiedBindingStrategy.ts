@@ -14,7 +14,7 @@ import { getNestedValue, setNestedValue } from '../../../utils/nestedValue'
  * getNestedValue and setNestedValue already handle all these cases.
  */
 export class UnifiedBindingStrategy implements BindingStrategy {
-  canHandle(path: string): boolean {
+  canHandle(_path: string): boolean {
     // This strategy handles ALL paths
     return true
   }

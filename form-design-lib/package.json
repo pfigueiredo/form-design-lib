@@ -1,7 +1,7 @@
 {
   "name": "form-design-lib",
   "version": "1.0.0",
-  "description": "React component library for form design",
+  "description": "A powerful React component library for building dynamic forms from JSON configuration with built-in API integration, validation, and extensibility",
   "type": "module",
   "main": "./dist/form-design-lib.umd.js",
   "module": "./dist/form-design-lib.es.js",
@@ -15,8 +15,49 @@
     "./style.css": "./dist/style.css"
   },
   "files": [
-    "dist"
+    "dist/**/*.js",
+    "dist/**/*.css",
+    "dist/**/*.d.ts",
+    "!dist/**/__tests__/**",
+    "!dist/**/*.test.*",
+    "!dist/**/ArrayBindingStrategy.*",
+    "!dist/**/DotNotationBindingStrategy.*",
+    "!dist/**/NestedListBindingStrategy.*",
+    "!dist/test/**",
+    "README.md",
+    "LICENSE",
+    "ADDING_CUSTOM_FIELDS.md",
+    "BINDING_SYSTEM.md",
+    "TESTING.md"
   ],
+  "keywords": [
+    "react",
+    "forms",
+    "form-builder",
+    "dynamic-forms",
+    "json-forms",
+    "form-configuration",
+    "react-forms",
+    "typescript",
+    "form-validation",
+    "api-integration",
+    "form-library",
+    "react-component-library"
+  ],
+  "author": {
+    "name": "Pedro Figueiredo",
+    "email": "pedro@t3k.pt",
+    "url": "https://github.com/pfigueiredo"
+  },
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pfigueiredo/form-design-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pfigueiredo/form-design-lib/issues"
+  },
+  "homepage": "https://github.com/pfigueiredo/form-design-lib#readme",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react'
+import { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertCircleIcon } from './Icons'
 import './ErrorBoundary.css'
 
@@ -38,7 +38,7 @@ export class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (import.meta.env.DEV) {
       console.error('ErrorBoundary caught an error:', error, errorInfo)
     }
 
@@ -78,7 +78,7 @@ export class ErrorBoundary extends Component<Props, State> {
             <p className="form-design-error-boundary-message">
               An unexpected error occurred. Please try refreshing the page or contact support if the problem persists.
             </p>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {import.meta.env.DEV && this.state.error && (
               <details className="form-design-error-boundary-details">
                 <summary className="form-design-error-boundary-details-summary">
                   Error Details (Development Only)

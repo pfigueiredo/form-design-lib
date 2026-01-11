@@ -1,4 +1,4 @@
-import { expect, afterEach, vi } from 'vitest'
+import { afterEach, vi } from 'vitest'
 import { cleanup } from '@testing-library/react'
 import '@testing-library/jest-dom/vitest'
 
@@ -8,9 +8,11 @@ afterEach(() => {
 })
 
 // Mock console methods to avoid noise in tests
-global.console = {
-  ...console,
-  log: vi.fn(),
-  error: vi.fn(),
-  warn: vi.fn(),
+if (typeof globalThis !== 'undefined') {
+  (globalThis as any).console = {
+    ...console,
+    log: vi.fn(),
+    error: vi.fn(),
+    warn: vi.fn(),
+  }
 }

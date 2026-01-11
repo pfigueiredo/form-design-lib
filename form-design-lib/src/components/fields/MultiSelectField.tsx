@@ -37,7 +37,6 @@ export const MultiSelectField: React.FC<MultiSelectFieldProps> = ({
       </p>
     ) : null
 
-  const commonInputClasses = `form-design-field-input form-design-field-multiselect ${error ? 'form-design-field-input-error' : ''}`
   const optionsData = sourceData[field.optionsSource || '']
   const options = Array.isArray(optionsData) ? optionsData : []
   
@@ -90,7 +89,7 @@ export const MultiSelectField: React.FC<MultiSelectFieldProps> = ({
                     checked={isSelected}
                     onChange={() => handleChange(optionValue)}
                     onBlur={() => onBlur && onBlur(selectedValues)}
-                    disabled={isDisabled}
+                    disabled={!!isDisabled}
                     className="form-design-field-multiselect-checkbox"
                   />
                   <span className="form-design-field-multiselect-label">{optionLabel}</span>

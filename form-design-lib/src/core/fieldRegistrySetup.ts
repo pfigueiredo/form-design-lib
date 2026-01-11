@@ -1,5 +1,4 @@
 import React from 'react'
-import { FieldType } from '../types'
 import type { FieldRegistry, BaseFieldProps } from './FieldRegistry'
 import { defaultFieldRegistry } from './FieldRegistry'
 

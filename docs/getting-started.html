@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started - form-design-lib</title>
+    <meta name="description" content="Complete guide to installing and using form-design-lib">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="6" fill="#6366f1"/>
+                        <path d="M8 12h16M8 16h12M8 20h16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <a href="index.html" class="logo-text" style="text-decoration: none; color: inherit;">form-design-lib</a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#examples">Examples</a>
+                    <a href="index.html#docs">Documentation</a>
+                    <a href="comparison.html">Comparison</a>
+                    <a href="index.html#license">License</a>
+                    <a href="https://github.com/pfigueiredo/form-design-lib" class="github-link" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="doc-page">
+        <div class="container">
+            <div class="doc-content">
+                <h1>Getting Started</h1>
+                <p class="doc-intro">A powerful React component library for building dynamic forms from JSON configuration. The library provides a flexible, extensible form engine with support for multiple field types, data binding, validation, conditional fields, and more.</p>
+
+                <h2>Project Structure</h2>
+                <ul>
+                    <li><code>form-design-lib/</code> - The component library (source code and build output)</li>
+                    <li><code>demo-app/</code> - Demo application for testing and showcasing the library</li>
+                </ul>
+
+                <h2>Features</h2>
+                <ul>
+                    <li><strong>Dynamic Form Generation</strong> - Build forms from JSON configuration</li>
+                    <li><strong>Extensible Field System</strong> - Register custom field types at runtime</li>
+                    <li><strong>Flexible Data Binding</strong> - Support for nested objects, arrays, and complex paths</li>
+                    <li><strong>Built-in Validation</strong> - On-change, on-blur, and on-submit validation with custom validators</li>
+                    <li><strong>API Integration</strong> - Fetch data from multiple sources with dependency management</li>
+                    <li><strong>Conditional Fields</strong> - Show/hide fields based on other field values</li>
+                    <li><strong>State Persistence</strong> - Optional localStorage persistence</li>
+                    <li><strong>Collapsible Sections</strong> - Organize fields into collapsible sections</li>
+                    <li><strong>Debug Mode</strong> - Track data fetching order and timing</li>
+                </ul>
+
+                <h2>Installation</h2>
+                <h3>1. Install the Library</h3>
+                <pre><code>cd form-design-lib
+npm install
+npm run build</code></pre>
+
+                <h3>2. Setup the Demo App</h3>
+                <pre><code>cd demo-app
+npm install
+npm run dev</code></pre>
+                <p>The demo app will be available at <code>http://localhost:5173</code></p>
+
+                <h2>Quick Start</h2>
+                <h3>Basic Usage</h3>
+                <pre><code>import { DynamicForm, FormConfig } from 'form-design-lib'
+import 'form-design-lib/style.css'
+
+const config: FormConfig = {
+  formName: 'User Registration',
+  gridSize: 12,
+  sources: [
+    {
+      sourceName: 'object',
+      sourceType: 'API',
+      endpoint: '/api/users/123',
+    },
+  ],
+  fields: [
+    {
+      fieldName: 'Username',
+      fieldType: 'Text',
+      binding: 'object.username',
+      required: true,
+    },
+    {
+      fieldName: 'Email',
+      fieldType: 'Email',
+      binding: 'object.email',
+      required: true,
+    },
+  ],
+}
+
+function App() {
+  const apiProvider = {
+    call: async (endpoint: string) => {
+      const response = await fetch(endpoint)
+      return response.json()
+    },
+  }
+
+  return (
+    &lt;DynamicForm
+      config={config}
+      apiProvider={apiProvider}
+      onSubmit={(data) => console.log('Form submitted:', data)}
+    /&gt;
+  )
+}</code></pre>
+
+                <h2>Field Types</h2>
+                <p>The library supports the following built-in field types:</p>
+                <ul>
+                    <li><strong>Text</strong> - Text input (also used for Email and Password)</li>
+                    <li><strong>Number</strong> - Numeric input with min/max validation</li>
+                    <li><strong>Textarea</strong> - Multi-line text input</li>
+                    <li><strong>Date</strong> - Date picker with min/max date validation</li>
+                    <li><strong>DateRange</strong> - Date range picker (start and end dates)</li>
+                    <li><strong>Checkbox</strong> - Boolean checkbox</li>
+                    <li><strong>Radio</strong> - Radio button group (inline or vertical layout)</li>
+                    <li><strong>Dropdown</strong> - Single-select dropdown with options from API</li>
+                    <li><strong>MultiSelect</strong> - Multi-select dropdown with checkboxes</li>
+                    <li><strong>File</strong> - File upload with type and size restrictions</li>
+                    <li><strong>List</strong> - Dynamic list of nested form fields</li>
+                </ul>
+
+                <h2>Custom Field Types</h2>
+                <p>You can register custom field types at runtime using the Field Registry:</p>
+                <pre><code>import { defaultFieldRegistry, BaseFieldProps } from 'form-design-lib'
+import React from 'react'
+
+const CustomColorField: React.FC&lt;BaseFieldProps&gt; = ({ field, value, onChange }) => {
+  return (
+    &lt;input
+      type="color"
+      value={value || '#000000'}
+      onChange={(e) => onChange(e.target.value)}
+    /&gt;
+  )
+}
+
+// Register your custom field
+defaultFieldRegistry.register('Color', CustomColorField)
+
+// Use it in your config
+const config: FormConfig = {
+  fields: [
+    {
+      fieldName: 'Background Color',
+      fieldType: 'Color',
+      binding: 'object.backgroundColor',
+    },
+  ],
+}</code></pre>
+                <p>See <a href="custom-fields.html">Custom Fields Guide</a> for detailed documentation.</p>
+
+                <h2>Advanced Features</h2>
+                <h3>Conditional Fields</h3>
+                <p>Show/hide fields based on other field values:</p>
+                <pre><code>{
+  fieldName: 'State',
+  fieldType: 'Dropdown',
+  binding: 'object.state',
+  dependsOn: {
+    field: 'object.country',
+    value: 'US',
+  },
+}</code></pre>
+
+                <h3>Data Source Dependencies</h3>
+                <p>Fetch data from multiple sources with dependencies:</p>
+                <pre><code>sources: [
+  {
+    sourceName: 'countryList',
+    sourceType: 'API',
+    endpoint: '/api/countries',
+  },
+  {
+    sourceName: 'stateList',
+    sourceType: 'API',
+    endpoint: '/api/states?country={countryCode}',
+    parameters: {
+      countryCode: 'object.country',
+    },
+  },
+]</code></pre>
+
+                <h3>Validation</h3>
+                <p>Configure validation triggers and custom validators:</p>
+                <pre><code>{
+  fieldName: 'Email',
+  fieldType: 'Email',
+  binding: 'object.email',
+  required: true,
+  validateOn: ['onChange', 'onBlur'],
+  customValidator: async (value, field, store) => {
+    const exists = await checkEmailExists(value)
+    return exists ? 'Email already registered' : undefined
+  },
+}</code></pre>
+
+                <h3>Debug Mode</h3>
+                <p>Enable debug logging to track data fetching:</p>
+                <pre><code>const config: FormConfig = {
+  debug: true,
+}</code></pre>
+                <p>This will log fetch order, timing, and details to the console.</p>
+
+                <h2>API Reference</h2>
+                <h3>DynamicForm Component</h3>
+                <pre><code>interface DynamicFormProps {
+  config: FormConfig
+  apiProvider: ApiProvider
+  onError?: (error: ApiError) => void
+  onValidationError?: (errors: Record&lt;string, string&gt;) => void
+  onSubmit?: (data: Record&lt;string, any&gt;) => void | Promise&lt;void&gt;
+  onReset?: () => void
+  successTimeout?: number
+  maxRetries?: number
+  retryDelay?: number
+  persistState?: boolean
+  storageKey?: string
+  collapsibleSections?: boolean
+  defaultSectionState?: 'expanded' | 'collapsed'
+}</code></pre>
+
+                <h3>Field Registry</h3>
+                <pre><code>import { defaultFieldRegistry } from 'form-design-lib'
+
+// Register a custom field
+defaultFieldRegistry.register('CustomType', CustomComponent)
+
+// Register multiple fields
+defaultFieldRegistry.registerMany({
+  'Type1': Component1,
+  'Type2': Component2,
+})
+
+// Check if a field is registered
+defaultFieldRegistry.has('CustomType')
+
+// Get a field component
+const Component = defaultFieldRegistry.get('CustomType')</code></pre>
+
+                <h2>Development Workflow</h2>
+                <ol>
+                    <li>Make changes to components in <code>form-design-lib/src/</code></li>
+                    <li>Run tests: <code>cd form-design-lib && npm test</code></li>
+                    <li>Build the library: <code>cd form-design-lib && npm run build</code></li>
+                    <li>Test in demo app: <code>cd demo-app && npm run dev</code></li>
+                </ol>
+                <p>The demo app uses Vite aliases to directly import from the library source during development, so changes are reflected immediately without rebuilding.</p>
+
+                <h2>Testing</h2>
+                <p>Run the test suite:</p>
+                <pre><code>cd form-design-lib
+npm test</code></pre>
+
+                <h2>Documentation</h2>
+                <ul>
+                    <li><a href="custom-fields.html">Custom Fields Guide</a> - Guide for creating and registering custom field types</li>
+                    <li><a href="binding-system.html">Binding System</a> - Documentation on the binding system architecture</li>
+                    <li><a href="architecture.html">Architecture Review</a> - Detailed architecture review and design patterns</li>
+                    <li><a href="testing.html">Testing Guide</a> - Testing guide and best practices</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>form-design-lib</h4>
+                    <p>Dynamic forms from JSON configuration</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#examples">Examples</a></li>
+                        <li><a href="index.html#docs">Documentation</a></li>
+                        <li><a href="index.html#license">License</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://github.com/pfigueiredo/form-design-lib" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://github.com/pfigueiredo/form-design-lib/issues" target="_blank" rel="noopener noreferrer">Issues</a></li>
+                        <li><a href="https://github.com/pfigueiredo/form-design-lib/discussions" target="_blank" rel="noopener noreferrer">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>License</h4>
+                    <p>GPLv2</p>
+                    <p class="footer-note">Commercial licenses available</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 form-design-lib. Licensed under GPLv2.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

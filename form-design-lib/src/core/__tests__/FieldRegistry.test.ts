@@ -1,8 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 import React from 'react'
 import { FieldRegistry, BaseFieldProps, defaultFieldRegistry } from '../FieldRegistry'
-import { initializeFieldRegistry, ensureInitialized } from '../fieldRegistrySetup'
-import { FieldType } from '../../types'
 
 // Mock field components for testing
 const MockTextField: React.FC<BaseFieldProps> = ({ field, value }) => {
@@ -188,7 +186,7 @@ describe('FieldRegistry', () => {
 describe('defaultFieldRegistry', () => {
   it('should be initialized with built-in field components', () => {
     // Ensure the registry is initialized
-    ensureInitialized()
+    // Registry is auto-initialized when imported
     
     // Check that common field types are registered
     expect(defaultFieldRegistry.has('Text')).toBe(true)

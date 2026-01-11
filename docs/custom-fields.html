@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Fields - form-design-lib</title>
+    <meta name="description" content="Learn how to create and register custom field types in form-design-lib">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="6" fill="#6366f1"/>
+                        <path d="M8 12h16M8 16h12M8 20h16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <a href="index.html" class="logo-text" style="text-decoration: none; color: inherit;">form-design-lib</a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#examples">Examples</a>
+                    <a href="index.html#docs">Documentation</a>
+                    <a href="comparison.html">Comparison</a>
+                    <a href="index.html#license">License</a>
+                    <a href="https://github.com/pfigueiredo/form-design-lib" class="github-link" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="doc-page">
+        <div class="container">
+            <div class="doc-content">
+                <h1>Adding Custom Field Types</h1>
+                <p class="doc-intro">This guide explains how to create and register custom field types in the form-design-lib using the Field Registry system.</p>
+
+                <h2>Overview</h2>
+                <p>The Field Registry system allows you to extend the form library with custom field types without modifying the core code. This enables:</p>
+                <ul>
+                    <li><strong>Plugin Development</strong> - Create reusable field components as separate packages</li>
+                    <li><strong>Custom Business Logic</strong> - Implement domain-specific field types</li>
+                    <li><strong>Third-Party Integration</strong> - Integrate external UI component libraries</li>
+                    <li><strong>Runtime Registration</strong> - Add fields dynamically based on configuration</li>
+                </ul>
+
+                <h3>How It Works</h3>
+                <ol>
+                    <li>Create a React component that implements the <code>BaseFieldProps</code> interface</li>
+                    <li>Register your component with the <code>FieldRegistry</code> using a unique field type identifier</li>
+                    <li>Use your custom field type in <code>FormConfig</code> just like built-in fields</li>
+                </ol>
+
+                <h2>Creating a Custom Field Component</h2>
+                <h3>Step 1: Create Your Component</h3>
+                <p>Your custom field component must accept <code>BaseFieldProps</code> as its props. Here's a minimal example:</p>
+                <pre><code>import React from 'react'
+import { BaseFieldProps } from 'form-design-lib'
+
+export const CustomTextField: React.FC&lt;BaseFieldProps&gt; = ({
+  field,
+  value,
+  onChange,
+  onBlur,
+  error,
+  isValidating = false,
+}) => {
+  const handleChange = (e: React.ChangeEvent&lt;HTMLInputElement&gt;) => {
+    onChange(e.target.value)
+  }
+
+  return (
+    &lt;div className="form-design-field-wrapper"&gt;
+      &lt;label className="form-design-field-label"&gt;
+        {field.fieldName}
+        {field.required && &lt;span className="form-design-field-required"&gt;*&lt;/span&gt;}
+      &lt;/label&gt;
+      
+      &lt;input
+        type="text"
+        value={value || ''}
+        onChange={handleChange}
+        className={`form-design-field-input ${error ? 'form-design-field-input-error' : ''}`}
+      /&gt;
+      
+      {error && (
+        &lt;p className="form-design-field-error"&gt;{error}&lt;/p&gt;
+      )}
+    &lt;/div&gt;
+  )
+}</code></pre>
+
+                <h3>Step 2: Understand BaseFieldProps</h3>
+                <p>The <code>BaseFieldProps</code> interface provides all the props your component will receive:</p>
+                <pre><code>interface BaseFieldProps {
+  field: FormField              // The field configuration from FormConfig
+  value: any                    // Current field value
+  onChange: (value: any) => void // Callback to update the value
+  onBlur?: (value: any) => void  // Optional blur callback
+  error?: string                 // Validation error message (if any)
+  sourceData?: Record&lt;string, any&gt; // Data from API sources
+  isLoadingSource?: boolean      // Loading state for source data
+  isValidating?: boolean         // Whether field is currently being validated
+}</code></pre>
+
+                <h2>Registering Your Field</h2>
+                <h3>Method 1: Register at Application Startup</h3>
+                <pre><code>import { defaultFieldRegistry } from 'form-design-lib'
+import { CustomTextField } from './CustomTextField'
+
+// Register your custom field
+defaultFieldRegistry.register('CustomText', CustomTextField)</code></pre>
+
+                <h3>Method 2: Register Multiple Fields</h3>
+                <pre><code>defaultFieldRegistry.registerMany({
+  'CustomText': CustomTextField,
+  'CustomNumber': CustomNumberField,
+  'CustomDate': CustomDateField,
+})</code></pre>
+
+                <h3>Method 3: Override Existing Fields</h3>
+                <p>You can override built-in field types (use with caution):</p>
+                <pre><code>// Override the built-in 'Text' field type
+defaultFieldRegistry.register('Text', MyCustomTextField, true) // override=true</code></pre>
+
+                <h2>Advanced Examples</h2>
+                <h3>Example 1: Dropdown Field with Custom Data Source</h3>
+                <p>This example shows how to create a field that uses <code>sourceData</code>:</p>
+                <pre><code>export const CustomDropdownField: React.FC&lt;BaseFieldProps&gt; = ({
+  field,
+  value,
+  onChange,
+  sourceData = {},
+  isLoadingSource = false,
+}) => {
+  const optionsSource = field.optionsSource || ''
+  const options = sourceData[optionsSource] || []
+  
+  return (
+    &lt;select
+      value={value || ''}
+      onChange={(e) => onChange(e.target.value)}
+      disabled={isLoadingSource}
+    &gt;
+      &lt;option value=""&gt;Select {field.fieldName}&lt;/option&gt;
+      {options.map((option: any, index: number) => (
+        &lt;option key={index} value={option.value}&gt;
+          {option.name}
+        &lt;/option&gt;
+      ))}
+    &lt;/select&gt;
+  )
+}</code></pre>
+
+                <h3>Example 2: Field with Custom Properties</h3>
+                <p>This example shows how to use custom properties in your field configuration:</p>
+                <pre><code>interface CustomColorFieldConfig extends FormField {
+  fieldType: 'CustomColor'
+  colorFormat?: 'hex' | 'rgb' | 'hsl'
+  showPicker?: boolean
+}
+
+export const CustomColorField: React.FC&lt;BaseFieldProps&gt; = ({
+  field,
+  value,
+  onChange,
+}) => {
+  const config = field as CustomColorFieldConfig
+  const colorFormat = config.colorFormat || 'hex'
+  
+  return (
+    &lt;div className="form-design-field-wrapper"&gt;
+      &lt;input
+        type="color"
+        value={value || '#000000'}
+        onChange={(e) => onChange(e.target.value)}
+      /&gt;
+    &lt;/div&gt;
+  )
+}</code></pre>
+
+                <h2>Best Practices</h2>
+                <h3>1. Naming Conventions</h3>
+                <ul>
+                    <li>Use descriptive, unique field type names (e.g., <code>CustomColorPicker</code> instead of <code>Color</code>)</li>
+                    <li>Prefix custom field types to avoid conflicts (e.g., <code>MyCompanyTextField</code>)</li>
+                    <li>Follow the pattern: <code>[Prefix][FieldType]</code> (e.g., <code>MaterialTextField</code>)</li>
+                </ul>
+
+                <h3>2. Component Structure</h3>
+                <ul>
+                    <li>Always handle <code>undefined</code> or <code>null</code> values gracefully</li>
+                    <li>Provide default values for optional props</li>
+                    <li>Use the provided CSS classes for consistency</li>
+                    <li>Include loading and validation states</li>
+                </ul>
+
+                <h3>3. Error Handling</h3>
+                <ul>
+                    <li>Always display error messages when provided</li>
+                    <li>Show validation state visually</li>
+                    <li>Handle edge cases (empty data, missing sources, etc.)</li>
+                </ul>
+
+                <h2>Using Your Custom Field</h2>
+                <p>Once registered, use your custom field in <code>FormConfig</code> just like built-in fields:</p>
+                <pre><code>import { DynamicForm, FormConfig } from 'form-design-lib'
+import { defaultFieldRegistry } from 'form-design-lib'
+import { CustomTextField } from './CustomTextField'
+
+// Register your field
+defaultFieldRegistry.register('CustomText', CustomTextField)
+
+// Use it in your config
+const config: FormConfig = {
+  formName: 'My Form',
+  gridSize: 12,
+  sources: [],
+  fields: [
+    {
+      fieldName: 'Custom Input',
+      fieldType: 'CustomText', // Your custom field type
+      binding: 'object.customField',
+      required: true,
+    },
+  ],
+}</code></pre>
+
+                <h2>Troubleshooting</h2>
+                <h3>Field Not Rendering</h3>
+                <p><strong>Problem:</strong> Your custom field doesn't appear in the form.</p>
+                <p><strong>Solutions:</strong></p>
+                <ol>
+                    <li>Verify the field is registered before <code>DynamicForm</code> renders</li>
+                    <li>Check that <code>fieldType</code> in config matches the registration key exactly</li>
+                    <li>Ensure your component returns valid JSX (not <code>null</code> or <code>undefined</code>)</li>
+                    <li>Check browser console for warnings/errors</li>
+                </ol>
+
+                <h3>Type Errors</h3>
+                <p><strong>Problem:</strong> TypeScript errors when using custom field types.</p>
+                <p><strong>Solutions:</strong></p>
+                <ol>
+                    <li>Extend the <code>FieldType</code> type if needed</li>
+                    <li>Use type assertions if necessary</li>
+                </ol>
+
+                <h2>API Reference</h2>
+                <h3>FieldRegistry Methods</h3>
+                <pre><code>// Register a single field
+registry.register(fieldType: string, component: FieldComponent, override?: boolean): void
+
+// Register multiple fields
+registry.registerMany(registrations: Record&lt;string, FieldComponent&gt;, override?: boolean): void
+
+// Get a field component
+registry.get(fieldType: string): FieldComponent | undefined
+
+// Check if a field is registered
+registry.has(fieldType: string): boolean
+
+// Unregister a field
+registry.unregister(fieldType: string): boolean
+
+// Get all registered types
+registry.getRegisteredTypes(): string[]
+
+// Clear all registrations
+registry.clear(): void</code></pre>
+
+                <h2>Next Steps</h2>
+                <ul>
+                    <li>Check out the built-in field components in <code>src/components/fields/</code> for reference</li>
+                    <li>Review the <code>FieldRegistry</code> implementation in <code>src/core/FieldRegistry.ts</code></li>
+                    <li>Explore the <code>fieldRegistrySetup.ts</code> to see how built-in fields are registered</li>
+                    <li>Consider creating a plugin package for reusable custom fields</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>form-design-lib</h4>
+                    <p>Dynamic forms from JSON configuration</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#examples">Examples</a></li>
+                        <li><a href="index.html#docs">Documentation</a></li>
+                        <li><a href="index.html#license">License</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://github.com/pfigueiredo/form-design-lib" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://github.com/pfigueiredo/form-design-lib/issues" target="_blank" rel="noopener noreferrer">Issues</a></li>
+                        <li><a href="https://github.com/pfigueiredo/form-design-lib/discussions" target="_blank" rel="noopener noreferrer">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>License</h4>
+                    <p>GPLv2</p>
+                    <p class="footer-note">Commercial licenses available</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 form-design-lib. Licensed under GPLv2.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
