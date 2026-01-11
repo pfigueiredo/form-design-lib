@@ -37,31 +37,8 @@ function updateActiveNav() {
 
 window.addEventListener('scroll', updateActiveNav);
 
-// Syntax highlighting for code blocks (simple version)
-function highlightCode() {
-    const codeBlocks = document.querySelectorAll('pre code');
-    
-    codeBlocks.forEach(block => {
-        let code = block.textContent;
-        
-        // Simple keyword highlighting
-        code = code.replace(/\b(const|let|var|function|return|if|else|import|export|from|default|interface|type|extends|implements)\b/g, 
-            '<span class="keyword">$1</span>');
-        
-        // String highlighting
-        code = code.replace(/(['"`])(?:(?=(\\?))\2.)*?\1/g, 
-            '<span class="string">$&</span>');
-        
-        // Number highlighting
-        code = code.replace(/\b\d+\b/g, 
-            '<span class="number">$&</span>');
-        
-        block.innerHTML = code;
-    });
-}
-
-// Run highlighting after page load
-document.addEventListener('DOMContentLoaded', highlightCode);
+// Syntax highlighting removed - was causing HTML tags to display as text
+// Code blocks will display as plain text with proper formatting
 
 // Add fade-in animation on scroll
 const observerOptions = {
