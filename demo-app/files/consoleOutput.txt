@@ -1,0 +1,291 @@
+[FormDebug] 🔄 Fetching countryList... {order: 1, url: '/api/countries', parameters: undefined, timestamp: '2026-01-11T20:51:07.441Z'}
+mockApi.ts:9 [API] GET /api/countries
+useStore.ts:149 [FormDebug] 🔄 Fetching countryList... {order: 1, url: '/api/countries', parameters: undefined, timestamp: '2026-01-11T20:51:07.442Z'}
+mockApi.ts:9 [API] GET /api/countries
+useStore.ts:149 [FormDebug] 🔄 Fetching countryList... {order: 1, url: '/api/countries', parameters: undefined, timestamp: '2026-01-11T20:51:07.556Z'}
+mockApi.ts:9 [API] GET /api/countries
+useStore.ts:174 [FormDebug] ✅ Fetched countryList (803ms) {order: 1, url: '/api/countries', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping stateList: Missing required parameters {parameters: {…}}
+useStore.ts:149 [FormDebug] 🔄 Fetching interestsList... {order: 2, url: '/api/interests', parameters: undefined, timestamp: '2026-01-11T20:51:08.244Z'}
+mockApi.ts:9 [API] GET /api/interests
+useStore.ts:174 [FormDebug] ✅ Fetched countryList (802ms) {order: 1, url: '/api/countries', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping stateList: Missing required parameters {parameters: {…}}
+useStore.ts:149 [FormDebug] 🔄 Fetching interestsList... {order: 2, url: '/api/interests', parameters: undefined, timestamp: '2026-01-11T20:51:08.245Z'}
+mockApi.ts:9 [API] GET /api/interests
+useStore.ts:137 [FormDebug] 💾 Skipping countryList: Already cached {url: '/api/countries', paramsSignature: '{"url":"/api/countries"}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping stateList: Missing required parameters {parameters: {…}}
+useStore.ts:149 [FormDebug] 🔄 Fetching interestsList... {order: 1, url: '/api/interests', parameters: undefined, timestamp: '2026-01-11T20:51:08.349Z'}
+mockApi.ts:9 [API] GET /api/interests
+useStore.ts:174 [FormDebug] ✅ Fetched countryList (802ms) {order: 1, url: '/api/countries', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping stateList: Missing required parameters {parameters: {…}}
+useStore.ts:149 [FormDebug] 🔄 Fetching interestsList... {order: 2, url: '/api/interests', parameters: undefined, timestamp: '2026-01-11T20:51:08.358Z'}
+mockApi.ts:9 [API] GET /api/interests
+useStore.ts:137 [FormDebug] 💾 Skipping countryList: Already cached {url: '/api/countries', paramsSignature: '{"url":"/api/countries"}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping stateList: Missing required parameters {parameters: {…}}
+useStore.ts:149 [FormDebug] 🔄 Fetching interestsList... {order: 1, url: '/api/interests', parameters: undefined, timestamp: '2026-01-11T20:51:08.467Z'}
+mockApi.ts:9 [API] GET /api/interests
+useStore.ts:174 [FormDebug] ✅ Fetched interestsList (807ms) {order: 2, url: '/api/interests', dataSize: '6 items', dataPreview: 'Array[6]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching skillsList... {order: 3, url: '/api/skills', parameters: undefined, timestamp: '2026-01-11T20:51:09.051Z'}
+mockApi.ts:9 [API] GET /api/skills
+useStore.ts:174 [FormDebug] ✅ Fetched interestsList (806ms) {order: 2, url: '/api/interests', dataSize: '6 items', dataPreview: 'Array[6]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching skillsList... {order: 3, url: '/api/skills', parameters: undefined, timestamp: '2026-01-11T20:51:09.051Z'}
+mockApi.ts:9 [API] GET /api/skills
+useStore.ts:174 [FormDebug] ✅ Fetched interestsList (806ms) {order: 1, url: '/api/interests', dataSize: '6 items', dataPreview: 'Array[6]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching skillsList... {order: 2, url: '/api/skills', parameters: undefined, timestamp: '2026-01-11T20:51:09.155Z'}
+mockApi.ts:9 [API] GET /api/skills
+useStore.ts:137 [FormDebug] 💾 Skipping countryList: Already cached {url: '/api/countries', paramsSignature: '{"url":"/api/countries"}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping stateList: Missing required parameters {parameters: {…}}
+useStore.ts:137 [FormDebug] 💾 Skipping interestsList: Already cached {url: '/api/interests', paramsSignature: '{"url":"/api/interests"}'}
+useStore.ts:149 [FormDebug] 🔄 Fetching skillsList... {order: 1, url: '/api/skills', parameters: undefined, timestamp: '2026-01-11T20:51:09.155Z'}
+mockApi.ts:9 [API] GET /api/skills
+useStore.ts:174 [FormDebug] ✅ Fetched interestsList (800ms) {order: 2, url: '/api/interests', dataSize: '6 items', dataPreview: 'Array[6]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching skillsList... {order: 3, url: '/api/skills', parameters: undefined, timestamp: '2026-01-11T20:51:09.159Z'}
+mockApi.ts:9 [API] GET /api/skills
+useStore.ts:137 [FormDebug] 💾 Skipping countryList: Already cached {url: '/api/countries', paramsSignature: '{"url":"/api/countries"}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping stateList: Missing required parameters {parameters: {…}}
+useStore.ts:137 [FormDebug] 💾 Skipping interestsList: Already cached {url: '/api/interests', paramsSignature: '{"url":"/api/interests"}'}
+useStore.ts:149 [FormDebug] 🔄 Fetching skillsList... {order: 1, url: '/api/skills', parameters: undefined, timestamp: '2026-01-11T20:51:09.266Z'}
+mockApi.ts:9 [API] GET /api/skills
+useStore.ts:174 [FormDebug] ✅ Fetched interestsList (802ms) {order: 1, url: '/api/interests', dataSize: '6 items', dataPreview: 'Array[6]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching skillsList... {order: 2, url: '/api/skills', parameters: undefined, timestamp: '2026-01-11T20:51:09.269Z'}
+mockApi.ts:9 [API] GET /api/skills
+useStore.ts:137 [FormDebug] 💾 Skipping countryList: Already cached {url: '/api/countries', paramsSignature: '{"url":"/api/countries"}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping stateList: Missing required parameters {parameters: {…}}
+useStore.ts:137 [FormDebug] 💾 Skipping interestsList: Already cached {url: '/api/interests', paramsSignature: '{"url":"/api/interests"}'}
+useStore.ts:149 [FormDebug] 🔄 Fetching skillsList... {order: 1, url: '/api/skills', parameters: undefined, timestamp: '2026-01-11T20:51:09.378Z'}
+mockApi.ts:9 [API] GET /api/skills
+useStore.ts:174 [FormDebug] ✅ Fetched skillsList (806ms) {order: 3, url: '/api/skills', dataSize: '8 items', dataPreview: 'Array[8]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching experienceLevelsList... {order: 4, url: '/api/experience-levels', parameters: undefined, timestamp: '2026-01-11T20:51:09.857Z'}
+mockApi.ts:9 [API] GET /api/experience-levels
+useStore.ts:174 [FormDebug] ✅ Fetched skillsList (806ms) {order: 3, url: '/api/skills', dataSize: '8 items', dataPreview: 'Array[8]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching experienceLevelsList... {order: 4, url: '/api/experience-levels', parameters: undefined, timestamp: '2026-01-11T20:51:09.858Z'}
+mockApi.ts:9 [API] GET /api/experience-levels
+useStore.ts:174 [FormDebug] ✅ Fetched skillsList (805ms) {order: 2, url: '/api/skills', dataSize: '8 items', dataPreview: 'Array[8]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching experienceLevelsList... {order: 3, url: '/api/experience-levels', parameters: undefined, timestamp: '2026-01-11T20:51:09.961Z'}
+mockApi.ts:9 [API] GET /api/experience-levels
+useStore.ts:174 [FormDebug] ✅ Fetched skillsList (806ms) {order: 1, url: '/api/skills', dataSize: '8 items', dataPreview: 'Array[8]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching experienceLevelsList... {order: 2, url: '/api/experience-levels', parameters: undefined, timestamp: '2026-01-11T20:51:09.961Z'}
+mockApi.ts:9 [API] GET /api/experience-levels
+useStore.ts:174 [FormDebug] ✅ Fetched skillsList (802ms) {order: 3, url: '/api/skills', dataSize: '8 items', dataPreview: 'Array[8]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching experienceLevelsList... {order: 4, url: '/api/experience-levels', parameters: undefined, timestamp: '2026-01-11T20:51:09.961Z'}
+mockApi.ts:9 [API] GET /api/experience-levels
+useStore.ts:137 [FormDebug] 💾 Skipping countryList: Already cached {url: '/api/countries', paramsSignature: '{"url":"/api/countries"}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping stateList: Missing required parameters {parameters: {…}}
+useStore.ts:137 [FormDebug] 💾 Skipping interestsList: Already cached {url: '/api/interests', paramsSignature: '{"url":"/api/interests"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping skillsList: Already cached {url: '/api/skills', paramsSignature: '{"url":"/api/skills"}'}
+useStore.ts:149 [FormDebug] 🔄 Fetching experienceLevelsList... {order: 1, url: '/api/experience-levels', parameters: undefined, timestamp: '2026-01-11T20:51:10.067Z'}
+mockApi.ts:9 [API] GET /api/experience-levels
+useStore.ts:174 [FormDebug] ✅ Fetched skillsList (802ms) {order: 1, url: '/api/skills', dataSize: '8 items', dataPreview: 'Array[8]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching experienceLevelsList... {order: 2, url: '/api/experience-levels', parameters: undefined, timestamp: '2026-01-11T20:51:10.068Z'}
+mockApi.ts:9 [API] GET /api/experience-levels
+useStore.ts:174 [FormDebug] ✅ Fetched skillsList (805ms) {order: 2, url: '/api/skills', dataSize: '8 items', dataPreview: 'Array[8]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching experienceLevelsList... {order: 3, url: '/api/experience-levels', parameters: undefined, timestamp: '2026-01-11T20:51:10.074Z'}
+mockApi.ts:9 [API] GET /api/experience-levels
+useStore.ts:137 [FormDebug] 💾 Skipping countryList: Already cached {url: '/api/countries', paramsSignature: '{"url":"/api/countries"}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping stateList: Missing required parameters {parameters: {…}}
+useStore.ts:137 [FormDebug] 💾 Skipping interestsList: Already cached {url: '/api/interests', paramsSignature: '{"url":"/api/interests"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping skillsList: Already cached {url: '/api/skills', paramsSignature: '{"url":"/api/skills"}'}
+useStore.ts:149 [FormDebug] 🔄 Fetching experienceLevelsList... {order: 1, url: '/api/experience-levels', parameters: undefined, timestamp: '2026-01-11T20:51:10.180Z'}
+mockApi.ts:9 [API] GET /api/experience-levels
+useStore.ts:174 [FormDebug] ✅ Fetched skillsList (802ms) {order: 1, url: '/api/skills', dataSize: '8 items', dataPreview: 'Array[8]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching experienceLevelsList... {order: 2, url: '/api/experience-levels', parameters: undefined, timestamp: '2026-01-11T20:51:10.180Z'}
+mockApi.ts:9 [API] GET /api/experience-levels
+useStore.ts:137 [FormDebug] 💾 Skipping countryList: Already cached {url: '/api/countries', paramsSignature: '{"url":"/api/countries"}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping stateList: Missing required parameters {parameters: {…}}
+useStore.ts:137 [FormDebug] 💾 Skipping interestsList: Already cached {url: '/api/interests', paramsSignature: '{"url":"/api/interests"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping skillsList: Already cached {url: '/api/skills', paramsSignature: '{"url":"/api/skills"}'}
+useStore.ts:149 [FormDebug] 🔄 Fetching experienceLevelsList... {order: 1, url: '/api/experience-levels', parameters: undefined, timestamp: '2026-01-11T20:51:10.283Z'}
+mockApi.ts:9 [API] GET /api/experience-levels
+useStore.ts:174 [FormDebug] ✅ Fetched experienceLevelsList (812ms) {order: 4, url: '/api/experience-levels', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching employmentTypesList... {order: 5, url: '/api/employment-types', parameters: undefined, timestamp: '2026-01-11T20:51:10.670Z'}
+mockApi.ts:9 [API] GET /api/employment-types
+useStore.ts:174 [FormDebug] ✅ Fetched experienceLevelsList (812ms) {order: 4, url: '/api/experience-levels', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching employmentTypesList... {order: 5, url: '/api/employment-types', parameters: undefined, timestamp: '2026-01-11T20:51:10.670Z'}
+mockApi.ts:9 [API] GET /api/employment-types
+useStore.ts:174 [FormDebug] ✅ Fetched experienceLevelsList (800ms) {order: 3, url: '/api/experience-levels', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching employmentTypesList... {order: 4, url: '/api/employment-types', parameters: undefined, timestamp: '2026-01-11T20:51:10.761Z'}
+mockApi.ts:9 [API] GET /api/employment-types
+useStore.ts:174 [FormDebug] ✅ Fetched experienceLevelsList (801ms) {order: 2, url: '/api/experience-levels', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching employmentTypesList... {order: 3, url: '/api/employment-types', parameters: undefined, timestamp: '2026-01-11T20:51:10.762Z'}
+mockApi.ts:9 [API] GET /api/employment-types
+useStore.ts:174 [FormDebug] ✅ Fetched experienceLevelsList (803ms) {order: 4, url: '/api/experience-levels', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching employmentTypesList... {order: 5, url: '/api/employment-types', parameters: undefined, timestamp: '2026-01-11T20:51:10.764Z'}
+mockApi.ts:9 [API] GET /api/employment-types
+useStore.ts:137 [FormDebug] 💾 Skipping countryList: Already cached {url: '/api/countries', paramsSignature: '{"url":"/api/countries"}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping stateList: Missing required parameters {parameters: {…}}
+useStore.ts:137 [FormDebug] 💾 Skipping interestsList: Already cached {url: '/api/interests', paramsSignature: '{"url":"/api/interests"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping skillsList: Already cached {url: '/api/skills', paramsSignature: '{"url":"/api/skills"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping experienceLevelsList: Already cached {url: '/api/experience-levels', paramsSignature: '{"url":"/api/experience-levels"}'}
+useStore.ts:149 [FormDebug] 🔄 Fetching employmentTypesList... {order: 1, url: '/api/employment-types', parameters: undefined, timestamp: '2026-01-11T20:51:10.872Z'}
+mockApi.ts:9 [API] GET /api/employment-types
+useStore.ts:174 [FormDebug] ✅ Fetched experienceLevelsList (805ms) {order: 1, url: '/api/experience-levels', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching employmentTypesList... {order: 2, url: '/api/employment-types', parameters: undefined, timestamp: '2026-01-11T20:51:10.872Z'}
+mockApi.ts:9 [API] GET /api/employment-types
+useStore.ts:174 [FormDebug] ✅ Fetched experienceLevelsList (804ms) {order: 2, url: '/api/experience-levels', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching employmentTypesList... {order: 3, url: '/api/employment-types', parameters: undefined, timestamp: '2026-01-11T20:51:10.872Z'}
+mockApi.ts:9 [API] GET /api/employment-types
+useStore.ts:174 [FormDebug] ✅ Fetched experienceLevelsList (802ms) {order: 3, url: '/api/experience-levels', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching employmentTypesList... {order: 4, url: '/api/employment-types', parameters: undefined, timestamp: '2026-01-11T20:51:10.876Z'}
+mockApi.ts:9 [API] GET /api/employment-types
+useStore.ts:137 [FormDebug] 💾 Skipping countryList: Already cached {url: '/api/countries', paramsSignature: '{"url":"/api/countries"}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping stateList: Missing required parameters {parameters: {…}}
+useStore.ts:137 [FormDebug] 💾 Skipping interestsList: Already cached {url: '/api/interests', paramsSignature: '{"url":"/api/interests"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping skillsList: Already cached {url: '/api/skills', paramsSignature: '{"url":"/api/skills"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping experienceLevelsList: Already cached {url: '/api/experience-levels', paramsSignature: '{"url":"/api/experience-levels"}'}
+useStore.ts:149 [FormDebug] 🔄 Fetching employmentTypesList... {order: 1, url: '/api/employment-types', parameters: undefined, timestamp: '2026-01-11T20:51:11.120Z'}
+mockApi.ts:9 [API] GET /api/employment-types
+useStore.ts:174 [FormDebug] ✅ Fetched experienceLevelsList (941ms) {order: 1, url: '/api/experience-levels', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching employmentTypesList... {order: 2, url: '/api/employment-types', parameters: undefined, timestamp: '2026-01-11T20:51:11.121Z'}
+mockApi.ts:9 [API] GET /api/employment-types
+useStore.ts:174 [FormDebug] ✅ Fetched experienceLevelsList (941ms) {order: 2, url: '/api/experience-levels', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching employmentTypesList... {order: 3, url: '/api/employment-types', parameters: undefined, timestamp: '2026-01-11T20:51:11.121Z'}
+mockApi.ts:9 [API] GET /api/employment-types
+useStore.ts:174 [FormDebug] ✅ Fetched experienceLevelsList (838ms) {order: 1, url: '/api/experience-levels', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching employmentTypesList... {order: 2, url: '/api/employment-types', parameters: undefined, timestamp: '2026-01-11T20:51:11.121Z'}
+mockApi.ts:9 [API] GET /api/employment-types
+useStore.ts:137 [FormDebug] 💾 Skipping countryList: Already cached {url: '/api/countries', paramsSignature: '{"url":"/api/countries"}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping stateList: Missing required parameters {parameters: {…}}
+useStore.ts:137 [FormDebug] 💾 Skipping interestsList: Already cached {url: '/api/interests', paramsSignature: '{"url":"/api/interests"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping skillsList: Already cached {url: '/api/skills', paramsSignature: '{"url":"/api/skills"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping experienceLevelsList: Already cached {url: '/api/experience-levels', paramsSignature: '{"url":"/api/experience-levels"}'}
+useStore.ts:149 [FormDebug] 🔄 Fetching employmentTypesList... {order: 1, url: '/api/employment-types', parameters: undefined, timestamp: '2026-01-11T20:51:12.118Z'}
+mockApi.ts:9 [API] GET /api/employment-types
+useStore.ts:174 [FormDebug] ✅ Fetched employmentTypesList (1449ms) {order: 5, url: '/api/employment-types', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching object... {order: 6, url: '/api/Users/123', parameters: {…}, timestamp: '2026-01-11T20:51:12.119Z'}
+mockApi.ts:9 [API] GET /api/Users/123
+useStore.ts:174 [FormDebug] ✅ Fetched employmentTypesList (1449ms) {order: 5, url: '/api/employment-types', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching object... {order: 6, url: '/api/Users/123', parameters: {…}, timestamp: '2026-01-11T20:51:12.119Z'}
+mockApi.ts:9 [API] GET /api/Users/123
+useStore.ts:174 [FormDebug] ✅ Fetched employmentTypesList (1358ms) {order: 4, url: '/api/employment-types', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching object... {order: 5, url: '/api/Users/123', parameters: {…}, timestamp: '2026-01-11T20:51:12.120Z'}
+mockApi.ts:9 [API] GET /api/Users/123
+useStore.ts:174 [FormDebug] ✅ Fetched employmentTypesList (1359ms) {order: 3, url: '/api/employment-types', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching object... {order: 4, url: '/api/Users/123', parameters: {…}, timestamp: '2026-01-11T20:51:12.121Z'}
+mockApi.ts:9 [API] GET /api/Users/123
+useStore.ts:174 [FormDebug] ✅ Fetched employmentTypesList (1357ms) {order: 5, url: '/api/employment-types', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching object... {order: 6, url: '/api/Users/123', parameters: {…}, timestamp: '2026-01-11T20:51:12.121Z'}
+mockApi.ts:9 [API] GET /api/Users/123
+useStore.ts:174 [FormDebug] ✅ Fetched employmentTypesList (1250ms) {order: 1, url: '/api/employment-types', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching object... {order: 2, url: '/api/Users/123', parameters: {…}, timestamp: '2026-01-11T20:51:12.122Z'}
+mockApi.ts:9 [API] GET /api/Users/123
+useStore.ts:174 [FormDebug] ✅ Fetched employmentTypesList (1250ms) {order: 2, url: '/api/employment-types', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching object... {order: 3, url: '/api/Users/123', parameters: {…}, timestamp: '2026-01-11T20:51:12.122Z'}
+mockApi.ts:9 [API] GET /api/Users/123
+useStore.ts:174 [FormDebug] ✅ Fetched employmentTypesList (1250ms) {order: 3, url: '/api/employment-types', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching object... {order: 4, url: '/api/Users/123', parameters: {…}, timestamp: '2026-01-11T20:51:12.122Z'}
+mockApi.ts:9 [API] GET /api/Users/123
+useStore.ts:174 [FormDebug] ✅ Fetched employmentTypesList (1246ms) {order: 4, url: '/api/employment-types', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching object... {order: 5, url: '/api/Users/123', parameters: {…}, timestamp: '2026-01-11T20:51:12.122Z'}
+mockApi.ts:9 [API] GET /api/Users/123
+useStore.ts:174 [FormDebug] ✅ Fetched employmentTypesList (1003ms) {order: 1, url: '/api/employment-types', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching object... {order: 2, url: '/api/Users/123', parameters: {…}, timestamp: '2026-01-11T20:51:12.123Z'}
+mockApi.ts:9 [API] GET /api/Users/123
+useStore.ts:174 [FormDebug] ✅ Fetched employmentTypesList (1002ms) {order: 2, url: '/api/employment-types', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching object... {order: 3, url: '/api/Users/123', parameters: {…}, timestamp: '2026-01-11T20:51:12.123Z'}
+mockApi.ts:9 [API] GET /api/Users/123
+useStore.ts:174 [FormDebug] ✅ Fetched employmentTypesList (1002ms) {order: 3, url: '/api/employment-types', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching object... {order: 4, url: '/api/Users/123', parameters: {…}, timestamp: '2026-01-11T20:51:12.123Z'}
+mockApi.ts:9 [API] GET /api/Users/123
+useStore.ts:174 [FormDebug] ✅ Fetched employmentTypesList (1002ms) {order: 2, url: '/api/employment-types', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching object... {order: 3, url: '/api/Users/123', parameters: {…}, timestamp: '2026-01-11T20:51:12.123Z'}
+mockApi.ts:9 [API] GET /api/Users/123
+useStore.ts:137 [FormDebug] 💾 Skipping countryList: Already cached {url: '/api/countries', paramsSignature: '{"url":"/api/countries"}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping stateList: Missing required parameters {parameters: {…}}
+useStore.ts:137 [FormDebug] 💾 Skipping interestsList: Already cached {url: '/api/interests', paramsSignature: '{"url":"/api/interests"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping skillsList: Already cached {url: '/api/skills', paramsSignature: '{"url":"/api/skills"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping experienceLevelsList: Already cached {url: '/api/experience-levels', paramsSignature: '{"url":"/api/experience-levels"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping employmentTypesList: Already cached {url: '/api/employment-types', paramsSignature: '{"url":"/api/employment-types"}'}
+useStore.ts:149 [FormDebug] 🔄 Fetching object... {order: 1, url: '/api/Users/123', parameters: {…}, timestamp: '2026-01-11T20:51:13.115Z'}
+mockApi.ts:9 [API] GET /api/Users/123
+useStore.ts:174 [FormDebug] ✅ Fetched employmentTypesList (998ms) {order: 1, url: '/api/employment-types', dataSize: '4 items', dataPreview: 'Array[4]'}
+useStore.ts:149 [FormDebug] 🔄 Fetching object... {order: 2, url: '/api/Users/123', parameters: {…}, timestamp: '2026-01-11T20:51:13.116Z'}
+mockApi.ts:9 [API] GET /api/Users/123
+useStore.ts:174 [FormDebug] ✅ Fetched object (997ms) {order: 6, url: '/api/Users/123', dataSize: '18 properties', dataPreview: 'Object{userId, username, email...}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping experienceList: Missing required parameters {parameters: {…}}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 6, fetchOrder: Array(6), totalDuration: '5675ms', timestamp: '2026-01-11T20:51:13.116Z'}
+useStore.ts:174 [FormDebug] ✅ Fetched object (997ms) {order: 6, url: '/api/Users/123', dataSize: '18 properties', dataPreview: 'Object{userId, username, email...}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping experienceList: Missing required parameters {parameters: {…}}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 6, fetchOrder: Array(6), totalDuration: '5674ms', timestamp: '2026-01-11T20:51:13.116Z'}
+useStore.ts:174 [FormDebug] ✅ Fetched object (1002ms) {order: 5, url: '/api/Users/123', dataSize: '18 properties', dataPreview: 'Object{userId, username, email...}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping experienceList: Missing required parameters {parameters: {…}}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 5, fetchOrder: Array(5), totalDuration: '4775ms', timestamp: '2026-01-11T20:51:13.123Z'}
+useStore.ts:174 [FormDebug] ✅ Fetched object (1002ms) {order: 4, url: '/api/Users/123', dataSize: '18 properties', dataPreview: 'Object{userId, username, email...}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping experienceList: Missing required parameters {parameters: {…}}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 4, fetchOrder: Array(4), totalDuration: '3968ms', timestamp: '2026-01-11T20:51:13.123Z'}
+useStore.ts:174 [FormDebug] ✅ Fetched object (1002ms) {order: 6, url: '/api/Users/123', dataSize: '18 properties', dataPreview: 'Object{userId, username, email...}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping experienceList: Missing required parameters {parameters: {…}}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 6, fetchOrder: Array(6), totalDuration: '5567ms', timestamp: '2026-01-11T20:51:13.123Z'}
+useStore.ts:174 [FormDebug] ✅ Fetched object (1002ms) {order: 2, url: '/api/Users/123', dataSize: '18 properties', dataPreview: 'Object{userId, username, email...}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping experienceList: Missing required parameters {parameters: {…}}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 2, fetchOrder: Array(2), totalDuration: '2252ms', timestamp: '2026-01-11T20:51:13.124Z'}
+useStore.ts:174 [FormDebug] ✅ Fetched object (1002ms) {order: 3, url: '/api/Users/123', dataSize: '18 properties', dataPreview: 'Object{userId, username, email...}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping experienceList: Missing required parameters {parameters: {…}}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 3, fetchOrder: Array(3), totalDuration: '3057ms', timestamp: '2026-01-11T20:51:13.124Z'}
+useStore.ts:174 [FormDebug] ✅ Fetched object (1002ms) {order: 4, url: '/api/Users/123', dataSize: '18 properties', dataPreview: 'Object{userId, username, email...}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping experienceList: Missing required parameters {parameters: {…}}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 4, fetchOrder: Array(4), totalDuration: '3858ms', timestamp: '2026-01-11T20:51:13.124Z'}
+useStore.ts:174 [FormDebug] ✅ Fetched object (1003ms) {order: 5, url: '/api/Users/123', dataSize: '18 properties', dataPreview: 'Object{userId, username, email...}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping experienceList: Missing required parameters {parameters: {…}}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 5, fetchOrder: Array(5), totalDuration: '4659ms', timestamp: '2026-01-11T20:51:13.125Z'}
+useStore.ts:174 [FormDebug] ✅ Fetched object (1002ms) {order: 2, url: '/api/Users/123', dataSize: '18 properties', dataPreview: 'Object{userId, username, email...}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping experienceList: Missing required parameters {parameters: {…}}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 2, fetchOrder: Array(2), totalDuration: '2005ms', timestamp: '2026-01-11T20:51:13.125Z'}
+useStore.ts:174 [FormDebug] ✅ Fetched object (1002ms) {order: 3, url: '/api/Users/123', dataSize: '18 properties', dataPreview: 'Object{userId, username, email...}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping experienceList: Missing required parameters {parameters: {…}}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 3, fetchOrder: Array(3), totalDuration: '2946ms', timestamp: '2026-01-11T20:51:13.125Z'}
+useStore.ts:174 [FormDebug] ✅ Fetched object (1002ms) {order: 4, url: '/api/Users/123', dataSize: '18 properties', dataPreview: 'Object{userId, username, email...}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping experienceList: Missing required parameters {parameters: {…}}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 4, fetchOrder: Array(4), totalDuration: '3747ms', timestamp: '2026-01-11T20:51:13.125Z'}
+useStore.ts:174 [FormDebug] ✅ Fetched object (1003ms) {order: 3, url: '/api/Users/123', dataSize: '18 properties', dataPreview: 'Object{userId, username, email...}'}
+useStore.ts:125 [FormDebug] ⏸️  Skipping experienceList: Missing required parameters {parameters: {…}}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 3, fetchOrder: Array(3), totalDuration: '2843ms', timestamp: '2026-01-11T20:51:13.126Z'}
+useStore.ts:137 [FormDebug] 💾 Skipping countryList: Already cached {url: '/api/countries', paramsSignature: '{"url":"/api/countries"}'}
+useStore.ts:149 [FormDebug] 🔄 Fetching stateList... {order: 1, url: '/api/states?country=US', parameters: {…}, timestamp: '2026-01-11T20:51:14.125Z'}
+mockApi.ts:9 [API] GET /api/states?country=US
+useStore.ts:174 [FormDebug] ✅ Fetched object (1010ms) {order: 1, url: '/api/Users/123', dataSize: '18 properties', dataPreview: 'Object{userId, username, email...}'}
+useStore.ts:149 [FormDebug] 🔄 Fetching experienceList... {order: 2, url: '/api/userExperience/123', parameters: {…}, timestamp: '2026-01-11T20:51:14.125Z'}
+mockApi.ts:9 [API] GET /api/userExperience/123
+useStore.ts:174 [FormDebug] ✅ Fetched object (1010ms) {order: 2, url: '/api/Users/123', dataSize: '18 properties', dataPreview: 'Object{userId, username, email...}'}
+useStore.ts:149 [FormDebug] 🔄 Fetching experienceList... {order: 3, url: '/api/userExperience/123', parameters: {…}, timestamp: '2026-01-11T20:51:14.126Z'}
+mockApi.ts:9 [API] GET /api/userExperience/123
+useStore.ts:137 [FormDebug] 💾 Skipping countryList: Already cached {url: '/api/countries', paramsSignature: '{"url":"/api/countries"}'}
+useStore.ts:149 [FormDebug] 🔄 Fetching stateList... {order: 1, url: '/api/states?country=US', parameters: {…}, timestamp: '2026-01-11T20:51:15.117Z'}
+mockApi.ts:9 [API] GET /api/states?country=US
+useStore.ts:174 [FormDebug] ✅ Fetched stateList (992ms) {order: 1, url: '/api/states?country=US', dataSize: '3 items', dataPreview: 'Array[3]'}
+useStore.ts:137 [FormDebug] 💾 Skipping interestsList: Already cached {url: '/api/interests', paramsSignature: '{"url":"/api/interests"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping skillsList: Already cached {url: '/api/skills', paramsSignature: '{"url":"/api/skills"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping experienceLevelsList: Already cached {url: '/api/experience-levels', paramsSignature: '{"url":"/api/experience-levels"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping employmentTypesList: Already cached {url: '/api/employment-types', paramsSignature: '{"url":"/api/employment-types"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping object: Already cached {url: '/api/Users/123', paramsSignature: '{"url":"/api/Users/123","id":"123"}'}
+useStore.ts:149 [FormDebug] 🔄 Fetching experienceList... {order: 2, url: '/api/userExperience/123', parameters: {…}, timestamp: '2026-01-11T20:51:15.118Z'}
+mockApi.ts:9 [API] GET /api/userExperience/123
+useStore.ts:174 [FormDebug] ✅ Fetched experienceList (993ms) {order: 2, url: '/api/userExperience/123', dataSize: '3 items', dataPreview: 'Array[3]'}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 2, fetchOrder: Array(2), totalDuration: '2003ms', timestamp: '2026-01-11T20:51:15.118Z'}
+useStore.ts:174 [FormDebug] ✅ Fetched experienceList (992ms) {order: 3, url: '/api/userExperience/123', dataSize: '3 items', dataPreview: 'Array[3]'}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 3, fetchOrder: Array(3), totalDuration: '3000ms', timestamp: '2026-01-11T20:51:15.118Z'}
+useStore.ts:137 [FormDebug] 💾 Skipping countryList: Already cached {url: '/api/countries', paramsSignature: '{"url":"/api/countries"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping stateList: Already cached {url: '/api/states?country=US', paramsSignature: '{"url":"/api/states?country=US","countryCode":"US"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping interestsList: Already cached {url: '/api/interests', paramsSignature: '{"url":"/api/interests"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping skillsList: Already cached {url: '/api/skills', paramsSignature: '{"url":"/api/skills"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping experienceLevelsList: Already cached {url: '/api/experience-levels', paramsSignature: '{"url":"/api/experience-levels"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping employmentTypesList: Already cached {url: '/api/employment-types', paramsSignature: '{"url":"/api/employment-types"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping object: Already cached {url: '/api/Users/123', paramsSignature: '{"url":"/api/Users/123","id":"123"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping experienceList: Already cached {url: '/api/userExperience/123', paramsSignature: '{"url":"/api/userExperience/123","id":"123"}'}
+useStore.ts:174 [FormDebug] ✅ Fetched stateList (1010ms) {order: 1, url: '/api/states?country=US', dataSize: '3 items', dataPreview: 'Array[3]'}
+useStore.ts:137 [FormDebug] 💾 Skipping interestsList: Already cached {url: '/api/interests', paramsSignature: '{"url":"/api/interests"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping skillsList: Already cached {url: '/api/skills', paramsSignature: '{"url":"/api/skills"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping experienceLevelsList: Already cached {url: '/api/experience-levels', paramsSignature: '{"url":"/api/experience-levels"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping employmentTypesList: Already cached {url: '/api/employment-types', paramsSignature: '{"url":"/api/employment-types"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping object: Already cached {url: '/api/Users/123', paramsSignature: '{"url":"/api/Users/123","id":"123"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping experienceList: Already cached {url: '/api/userExperience/123', paramsSignature: '{"url":"/api/userExperience/123","id":"123"}'}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 1, fetchOrder: Array(1), totalDuration: '1011ms', timestamp: '2026-01-11T20:51:16.128Z'}
+useStore.ts:174 [FormDebug] ✅ Fetched experienceList (1010ms) {order: 2, url: '/api/userExperience/123', dataSize: '3 items', dataPreview: 'Array[3]'}
+useStore.ts:324 [FormDebug] 📊 Fetch Summary {totalSources: 2, fetchOrder: Array(2), totalDuration: '2003ms', timestamp: '2026-01-11T20:51:16.128Z'}
+useStore.ts:137 [FormDebug] 💾 Skipping countryList: Already cached {url: '/api/countries', paramsSignature: '{"url":"/api/countries"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping stateList: Already cached {url: '/api/states?country=US', paramsSignature: '{"url":"/api/states?country=US","countryCode":"US"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping interestsList: Already cached {url: '/api/interests', paramsSignature: '{"url":"/api/interests"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping skillsList: Already cached {url: '/api/skills', paramsSignature: '{"url":"/api/skills"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping experienceLevelsList: Already cached {url: '/api/experience-levels', paramsSignature: '{"url":"/api/experience-levels"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping employmentTypesList: Already cached {url: '/api/employment-types', paramsSignature: '{"url":"/api/employment-types"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping object: Already cached {url: '/api/Users/123', paramsSignature: '{"url":"/api/Users/123","id":"123"}'}
+useStore.ts:137 [FormDebug] 💾 Skipping experienceList: Already cached {url: '/api/userExperience/123', paramsSignature: '{"url":"/api/userExperience/123","id":"123"}'}

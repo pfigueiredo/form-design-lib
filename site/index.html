@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-design-lib - Dynamic Forms from JSON Configuration</title>
+    <meta name="description" content="A powerful React component library for building dynamic forms from JSON configuration with built-in API integration, validation, and extensibility.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="6" fill="#6366f1"/>
+                        <path d="M8 12h16M8 16h12M8 20h16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="logo-text">form-design-lib</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#examples">Examples</a>
+                    <a href="#docs">Documentation</a>
+                    <a href="#license">License</a>
+                    <a href="https://github.com/pfigueiredo/form-design-lib" class="github-link" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Build Dynamic Forms from
+                    <span class="gradient-text">JSON Configuration</span>
+                </h1>
+                <p class="hero-description">
+                    A powerful React component library for creating dynamic, API-integrated forms with built-in validation, 
+                    conditional fields, and extensible field types. Perfect for CMS, admin panels, and enterprise applications.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#getting-started" class="btn btn-primary">Get Started</a>
+                    <a href="#examples" class="btn btn-secondary">View Examples</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">11+</div>
+                        <div class="stat-label">Field Types</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">TypeScript</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Extensible</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-code">
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title">Example Configuration</span>
+                    </div>
+                    <pre><code>const config: FormConfig = {
+  formName: 'User Registration',
+  sources: [
+    {
+      sourceName: 'object',
+      sourceType: 'API',
+      endpoint: '/api/users/123',
+    },
+  ],
+  fields: [
+    {
+      fieldName: 'Username',
+      fieldType: 'Text',
+      binding: 'object.username',
+      required: true,
+    },
+    {
+      fieldName: 'Country',
+      fieldType: 'Dropdown',
+      binding: 'object.country',
+      optionsSource: 'countryList',
+    },
+  ],
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>JSON Configuration</h3>
+                    <p>Define entire forms using JSON or TypeScript configuration. No JSX required for form structure.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3>Field Registry</h3>
+                    <p>Register custom field types at runtime. Build plugins and extend functionality without modifying core code.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📡</div>
+                    <h3>API Integration</h3>
+                    <p>Built-in support for multiple API data sources with automatic dependency management and retry logic.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Advanced Validation</h3>
+                    <p>Multiple validation triggers, async validation, custom validators, and configurable error messages.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Conditional Fields</h3>
+                    <p>Show or hide fields based on other field values. Support for complex dependency chains.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Nested Lists</h3>
+                    <p>Native support for dynamic lists with nested form fields. Perfect for repeating sections.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3>State Persistence</h3>
+                    <p>Optional localStorage persistence to save user progress. Automatic state restoration on reload.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎛️</div>
+                    <h3>Collapsible Sections</h3>
+                    <p>Organize fields into collapsible sections for better UX in complex forms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🐛</div>
+                    <h3>Debug Mode</h3>
+                    <p>Track data fetching order, timing, and dependencies with built-in debug logging.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Field Types Section -->
+    <section class="field-types">
+        <div class="container">
+            <h2 class="section-title">Built-in Field Types</h2>
+            <div class="field-types-grid">
+                <div class="field-type-badge">Text</div>
+                <div class="field-type-badge">Email</div>
+                <div class="field-type-badge">Password</div>
+                <div class="field-type-badge">Number</div>
+                <div class="field-type-badge">Textarea</div>
+                <div class="field-type-badge">Date</div>
+                <div class="field-type-badge">DateRange</div>
+                <div class="field-type-badge">Checkbox</div>
+                <div class="field-type-badge">Radio</div>
+                <div class="field-type-badge">Dropdown</div>
+                <div class="field-type-badge">MultiSelect</div>
+                <div class="field-type-badge">File</div>
+                <div class="field-type-badge">List</div>
+            </div>
+            <p class="field-types-note">+ Register your own custom field types at runtime</p>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="examples">
+        <div class="container">
+            <h2 class="section-title">Examples</h2>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <h3>Basic Form</h3>
+                    <pre><code>const config = {
+  formName: 'Contact Form',
+  fields: [
+    {
+      fieldName: 'Name',
+      fieldType: 'Text',
+      binding: 'object.name',
+      required: true,
+    },
+    {
+      fieldName: 'Email',
+      fieldType: 'Email',
+      binding: 'object.email',
+      required: true,
+    },
+  ],
+}</code></pre>
+                </div>
+                <div class="example-card">
+                    <h3>API Integration</h3>
+                    <pre><code>sources: [
+  {
+    sourceName: 'stateList',
+    sourceType: 'API',
+    endpoint: '/api/states?country={code}',
+    parameters: {
+      code: 'object.country',
+    },
+  },
+]</code></pre>
+                </div>
+                <div class="example-card">
+                    <h3>Custom Field</h3>
+                    <pre><code>import { defaultFieldRegistry } from 'form-design-lib'
+
+defaultFieldRegistry.register(
+  'Color',
+  CustomColorField
+)
+
+// Use in config
+{ fieldType: 'Color', binding: 'object.color' }</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Getting Started Section -->
+    <section id="getting-started" class="getting-started">
+        <div class="container">
+            <h2 class="section-title">Getting Started</h2>
+            <div class="getting-started-content">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Install</h3>
+                        <pre><code>npm install form-design-lib</code></pre>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Import</h3>
+                        <pre><code>import { DynamicForm, FormConfig } from 'form-design-lib'
+import 'form-design-lib/style.css'</code></pre>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Configure</h3>
+                        <pre><code>const config: FormConfig = {
+  formName: 'My Form',
+  gridSize: 12,
+  sources: [...],
+  fields: [...],
+}</code></pre>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Use</h3>
+                        <pre><code>&lt;DynamicForm
+  config={config}
+  apiProvider={apiProvider}
+  onSubmit={(data) => console.log(data)}
+/&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="documentation">
+        <div class="container">
+            <h2 class="section-title">Documentation</h2>
+            <div class="docs-grid">
+                        <a href="https://github.com/pfigueiredo/form-design-lib/blob/main/README.md" class="doc-card" target="_blank" rel="noopener noreferrer">
+                    <h3>📖 Getting Started</h3>
+                    <p>Complete guide to installing and using form-design-lib</p>
+                </a>
+                        <a href="https://github.com/pfigueiredo/form-design-lib/blob/main/form-design-lib/ADDING_CUSTOM_FIELDS.md" class="doc-card" target="_blank" rel="noopener noreferrer">
+                            <h3>🔧 Custom Fields</h3>
+                            <p>Learn how to create and register custom field types</p>
+                        </a>
+                        <a href="https://github.com/pfigueiredo/form-design-lib/blob/main/form-design-lib/BINDING_SYSTEM.md" class="doc-card" target="_blank" rel="noopener noreferrer">
+                            <h3>🔗 Binding System</h3>
+                            <p>Understand how the binding system works</p>
+                        </a>
+                        <a href="https://github.com/pfigueiredo/form-design-lib/blob/main/COMPARISON.md" class="doc-card" target="_blank" rel="noopener noreferrer">
+                            <h3>⚖️ Comparison</h3>
+                            <p>See how form-design-lib compares to other libraries</p>
+                        </a>
+                        <a href="https://github.com/pfigueiredo/form-design-lib/blob/main/ARCHITECTURE_REVIEW_V2.md" class="doc-card" target="_blank" rel="noopener noreferrer">
+                            <h3>🏗️ Architecture</h3>
+                            <p>Deep dive into the library architecture</p>
+                        </a>
+                        <a href="https://github.com/pfigueiredo/form-design-lib/blob/main/form-design-lib/TESTING.md" class="doc-card" target="_blank" rel="noopener noreferrer">
+                    <h3>🧪 Testing</h3>
+                    <p>Testing guide and best practices</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- License Section -->
+    <section id="license" class="license">
+        <div class="container">
+            <div class="license-content">
+                <h2 class="section-title">License</h2>
+                <div class="license-info">
+                    <p class="license-text">
+                        <strong>form-design-lib</strong> is licensed under the <strong>GNU General Public License v2.0 (GPLv2)</strong>.
+                    </p>
+                    <p class="license-text">
+                        This means you are free to use, modify, and distribute the library under the terms of the GPLv2 license.
+                    </p>
+                    <div class="license-commercial">
+                        <h3>Commercial License</h3>
+                        <p>
+                            For commercial use that requires a different license (e.g., proprietary software, closed-source applications), 
+                            please contact the author to discuss commercial licensing options.
+                        </p>
+                        <a href="mailto:pedro@t3k.pt?subject=Commercial License Inquiry - form-design-lib" class="btn btn-primary">Contact for Commercial License</a>
+                    </div>
+                    <div class="license-links">
+                        <a href="https://www.gnu.org/licenses/gpl-2.0.html" target="_blank" rel="noopener noreferrer">View GPLv2 License</a>
+                        <a href="https://github.com/pfigueiredo/form-design-lib/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">View LICENSE File</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>form-design-lib</h4>
+                    <p>Dynamic forms from JSON configuration</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#examples">Examples</a></li>
+                        <li><a href="#docs">Documentation</a></li>
+                        <li><a href="#license">License</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://github.com/pfigueiredo/form-design-lib" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://github.com/pfigueiredo/form-design-lib/issues" target="_blank" rel="noopener noreferrer">Issues</a></li>
+                        <li><a href="https://github.com/pfigueiredo/form-design-lib/discussions" target="_blank" rel="noopener noreferrer">Discussions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>License</h4>
+                    <p>GPLv2</p>
+                    <p class="footer-note">Commercial licenses available</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 form-design-lib. Licensed under GPLv2.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

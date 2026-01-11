@@ -1,0 +1,18 @@
+{
+  "name": "form-design-lib-website",
+  "version": "1.0.0",
+  "description": "Official website for form-design-lib",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "preview": "npx serve ."
+  },
+  "keywords": [
+    "form-design-lib",
+    "website",
+    "documentation"
+  ],
+  "author": "",
+  "license": "GPL-2.0"
+}
