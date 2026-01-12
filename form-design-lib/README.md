@@ -23,7 +23,7 @@ npm install form-design-lib
 - 💾 **State Persistence** - Optional localStorage persistence
 - 🎛️ **Collapsible Sections** - Organize fields into collapsible sections
 - 🐛 **Debug Mode** - Track data fetching order and timing
-- 📦 **Small Bundle** - ~7KB gzipped (ES module)
+- 📦 **Optimized Bundle** - ~19KB gzipped (ES module) with all features included
 
 ## Usage
 

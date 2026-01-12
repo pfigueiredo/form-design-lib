@@ -31,5 +31,7 @@ export default defineConfig({
       },
     },
     cssCodeSplit: false,
+    minify: 'esbuild', // Use esbuild for faster, smaller builds
+    sourcemap: false, // Disable sourcemaps for smaller bundle
   },
 })

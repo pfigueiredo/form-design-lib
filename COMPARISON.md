@@ -7,7 +7,7 @@ This document compares `form-design-lib` with other popular open-source React fo
 ### 1. **form-design-lib**
 - **Focus**: Configuration-driven form generation with API integration
 - **Approach**: JSON/TypeScript configuration with runtime field registration
-- **Size**: ~7KB (gzipped, ES module)
+- **Size**: ~19KB (gzipped, ES module)
 - **GitHub Stars**: New project
 
 ### 2. **react-hook-form**
@@ -245,7 +245,7 @@ const schema = {
 
 | Library | Re-renders | Bundle Size (gzipped) | Optimization |
 |---------|-----------|----------------------|--------------|
-| **form-design-lib** | Moderate | ~7KB | Memoization, selective updates |
+| **form-design-lib** | Moderate | ~19KB | Memoization, selective updates |
 | **react-hook-form** | Minimal | ~9KB | Uncontrolled inputs, minimal re-renders |
 | **Formik** | High | ~15KB | Controlled inputs, frequent re-renders |
 | **RJSF** | Moderate | ~50KB+ | Schema parsing overhead |
@@ -326,7 +326,7 @@ Unlike other libraries, `form-design-lib` has native support for:
 
 ### Compared to react-hook-form:
 - ❌ **Performance**: More re-renders due to controlled components
-- ✅ **Bundle Size**: Smaller bundle size (~7KB vs ~9KB gzipped)
+- ⚠️ **Bundle Size**: Larger bundle size (~19KB vs ~9KB gzipped) due to built-in features
 - ❌ **Maturity**: Newer library, smaller community
 
 ### Compared to Formik:

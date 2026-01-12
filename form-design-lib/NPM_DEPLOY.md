@@ -23,8 +23,8 @@ This guide outlines the steps to publish `form-design-lib` to npm.
 
 ## Bundle Sizes (Production Build)
 
-- **ES Module**: ~82.65 KB (uncompressed) / ~18.74 KB (gzipped)
-- **UMD**: ~52.66 KB (uncompressed) / ~15.42 KB (gzipped)
+- **ES Module**: ~82.65 KB (uncompressed) / ~18.74 KB (gzipped) ≈ **~19KB (gzipped)**
+- **UMD**: ~52.66 KB (uncompressed) / ~15.42 KB (gzipped) ≈ **~15KB (gzipped)**
 - **CSS**: ~14.45 KB (uncompressed) / ~2.70 KB (gzipped)
 
 ## Deployment Steps
